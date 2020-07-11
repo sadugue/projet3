@@ -215,7 +215,7 @@ section {
         background:  #795356;
     }
 
-    h2, h3 .acceuil, h4 {
+    h2, .acceuil>h3, h4 {
         font-size: 30px;
         text-align: center;
         font-family: D;
@@ -245,13 +245,13 @@ section {
 
 
 
-h2 {
-    .musique {
+.musique {
+     h2{
         i {
             font-size: 80px;
             text-align: center;
         }
-    }
+     }
 }
 
 .chic {
@@ -325,7 +325,7 @@ h2 {
         transform: rotate(-90deg);
     }
 
-    h2, h3 .acceuil, h4 {
+    h2, .acceuil>h3, h4 {
         font-size: 30px;
         text-align: center;
         background: -webkit-linear-gradient( right, #a374fa, #c9791c);
@@ -341,7 +341,7 @@ h2 {
 .delice {
     background-color: $coulour-fond-delice;
 
-    h2, h3 .acceuil, h4 {
+    h2,.acceuil>h3, h4 {
         font-size: 30px;
         text-align: center;
         font-family: C;
@@ -369,7 +369,7 @@ h2 {
         width: 100%;
     }
 
-    h2, h3 .acceuil, h4 {
+    h2,.acceuil>h3, h4 {
         font-size: 30px;
         text-align: center;
         font-family: E;
