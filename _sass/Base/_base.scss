@@ -7,10 +7,15 @@
     font-size: 33px;
 }
 
+section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
 .ligne {
     display: flex;
     justify-content: center;
-    margin: 5em;
+    margin: 3em;
 
     .lien-menu {
         display: flex;
@@ -29,21 +34,128 @@
 
     .btn {
         background-color: $colour-primary;
-        width: 250px;
+        width: 270px;
         height: 70px;
-        padding: auto;
         margin-top: 2em;
         margin-bottom: 2em;
         border-radius: 10px;
-        
-        p{
+
+        p {
             text-align: center;
-            font-size: 25px;
+            font-size: 30px;
             color: $colour-logo;
+        }
+
+        .ajout {
+            opacity: 0;
+            color: $colour-logo;
+        }
+
+        .ajout2 {
+            opacity: 0;
+            color: $colour-logo;
+        }
+
+        .ajout3 {
+            opacity: 0;
+            color: $colour-logo;
+        }
+
+        &:hover {
+            .ajout {
+                animation: topBottom 0.65s;
+                animation-iteration-count: 1;
+                animation-delay: 0.35s;
+                opacity: 1;
+                transition: all ease-in-out 0.4s 0.35s;
+            }
+
+            .ajout2 {
+                animation: topBottom 0.65s;
+                animation-iteration-count: 1;
+                animation-delay: 0.80s;
+                opacity: 1;
+                transition: all ease-in-out 0.4s 0.8s;
+            }
+
+            .ajout3 {
+                animation: topBottom 0.65s;
+                animation-iteration-count: 1;
+                animation-delay: 1.2s;
+                opacity: 1;
+                transition: all ease-in-out 0.4s 1.2s;
+            }
         }
     }
 }
 
+
+
+.legal:hover, .contact:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes topBottom {
+    20% {
+        transform: translateY(1px);
+    }
+
+    65% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(1px);
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
 
 @font-face {
     font-family: 'A';
@@ -77,6 +189,14 @@
     src: url('Quintessential-Regular.ttf');
 }
 
+.lien-menu:hover {
+    transform: scale(1.5);
+    opacity: 0.6;
+    transition: transform ease-in-out 0.4s;
+}
+
+
+
 .note {
     background-color: $coulour-fond-note;
 
@@ -87,19 +207,15 @@
     }
 
     .trait {
-        margin-top: 70px;
+        margin-top: 45px;
         margin-left: 1em;
         margin-right: 2em;
         height: 5px;
-        width: 15em;
-        background: -webkit-linear-gradient( right, #a68485, #795356);
-        background: -moz-linear-gradient( right, #a68485, #795356);
-        background: -ms-linear-gradient( right, #a68485, #795356);
-        background: -o-linear-gradient( right, #a68485, #795356);
-        background: linear-gradient( to left, #a68485, #795356);
+        width: 22em;
+        background:  #795356;
     }
 
-    h2, h3, h4 {
+    h2, h3 .acceuil, h4 {
         font-size: 30px;
         text-align: center;
         font-family: D;
@@ -129,11 +245,10 @@
 
 
 
-
 h2 {
     .musique {
         i {
-            font-size: 45px;
+            font-size: 80px;
             text-align: center;
         }
     }
@@ -142,7 +257,75 @@ h2 {
 .chic {
     background-color: $coulour-fond-chic;
 
-    h2, h3, h4 {
+    .chic_entrée {
+        color: red;
+
+        h3 {
+            color: red;
+        }
+    }
+
+    .chic_plat {
+        color: purple;
+
+        h3 {
+            color: purple;
+        }
+    }
+
+    .chic_dessert {
+        color: blue;
+
+        h3 {
+            color: blue;
+        }
+    }
+
+    .trait-1 {
+        .triangle-1 {
+            width: 0px;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 30px solid;
+            transform: scale(0.7, 1) translateY(-1000%);
+        }
+
+        .triangle-2 {
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-top: 30px solid;
+            transform: scale(0.7, 12) translateY(-38%);
+        }
+
+        transform: rotate(90deg);
+    }
+
+    .trait-2 {
+        .triangle-1 {
+            width: 0px;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 30px solid;
+            transform: scale(0.7, 1) translateY(-1000%);
+        }
+
+        .triangle-2 {
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-top: 30px solid;
+            transform: scale(0.7, 12) translateY(-38%);
+        }
+
+        transform: rotate(-90deg);
+    }
+
+    h2, h3 .acceuil, h4 {
         font-size: 30px;
         text-align: center;
         background: -webkit-linear-gradient( right, #a374fa, #c9791c);
@@ -158,7 +341,7 @@ h2 {
 .delice {
     background-color: $coulour-fond-delice;
 
-    h2, h3, h4 {
+    h2, h3 .acceuil, h4 {
         font-size: 30px;
         text-align: center;
         font-family: C;
@@ -186,7 +369,7 @@ h2 {
         width: 100%;
     }
 
-    h2, h3, h4 {
+    h2, h3 .acceuil, h4 {
         font-size: 30px;
         text-align: center;
         font-family: E;
@@ -203,15 +386,42 @@ h2 {
 .menu {
     width: 80%;
     margin: auto;
+    padding-top: 25px;
+    padding-bottom: 40px;
 
     h2 {
         font-size: 65px;
     }
 
+    .colonne {
+        display: flex;
+        flex-direction: column;
+
+        .souligne {
+            height: 2px;
+            width: 100%;
+            background: #000;
+            transform: scaleX(0);
+        }
+
+        &:hover {
+            .souligne {
+                transform: scaleX(1);
+                transform-origin: top left;
+                transition: transform ease-in-out 0.6s;
+            }
+        }
+    }
+
     h3 {
-        font-size: 45px;
+        text-align: center;
+        font-size: 28px;
         font-family: G;
         color: black;
+    }
+
+    p {
+        font-size: 25px;
     }
 
     .ligne {
@@ -220,12 +430,14 @@ h2 {
     }
 }
 
+
+
 .mets {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 2px;
-    padding: 2px;
+    margin: 10px;
+    padding: 60px;
     font-family: G;
 }
 
@@ -235,15 +447,19 @@ a{
 }
 
 .left{
-
+    height: 10px;
     width: auto;
 }
 
 .right {
+    height: 10px;
     width: 40px;
 }
 
 footer {
+    position: fixed;
+    width: 97%;
+    bottom: 0px;
     display: flex;
     justify-content: space-between;
     background-color: $colour-primary;
